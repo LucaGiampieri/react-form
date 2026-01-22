@@ -15,6 +15,13 @@ export function RecipesList() {
     const addRecipes = e => {
         //facciamo in modo che l'invio del form non resetti la pagina
         e.preventDefault();
+
+        //facciamo in modo che se newRecipes (l'input del form al momento che viene premuto invio)
+        //è vuoto, allora usciamo dalla funzione e non invia nulla, in modo da non mandare righe vuote 
+        if (newRecipes === "") {
+            return;
+        }
+
         //creiamo un array (grazie a spred) dove salviamo i valori precedenti con l'aggiunta di quello nuovo
         const updatedRecipes = [...recipes, newRecipes];
         //tramite setRecipes cambiamo il valore di Recipes nell'array precedentemente creato
@@ -34,7 +41,6 @@ export function RecipesList() {
         setRecipes(updatedRecipes);
     }
 
-
     return (
         <div className="recipes-container">
             <h2 className="recipes-title" >Ricette:</h2>
@@ -49,7 +55,7 @@ export function RecipesList() {
                     </li>
                 ))}
             </ul>
-            {/* form per aggiungere nuovo task a lista precedente */}
+            {/* form per aggiungere nuova Recipes alla lista precedente */}
             <form onSubmit={addRecipes}>
                 <div className="input-container">
                     <input
