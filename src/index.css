@@ -40,6 +40,8 @@ header {
   height: calc(100vh - 100px);
 }
 
+/* Recipes List */
+
 .recipes-container {
   width: 70%;
   margin: 0 auto;
@@ -54,7 +56,7 @@ header {
 }
 
 .recipes-list {
-  padding-top: 0.5rem;
+  padding-top: 0.8rem;
 }
 
 .recipes-list li {
@@ -64,4 +66,21 @@ header {
 .recipe {
   font-size: 1.5rem;
   color: #290F00;
+}
+
+/* Form */
+
+.input-container {
+  margin-top: 0.5rem;
+}
+
+input {
+  border: 2px solid #290F00;
+  color: #290F00;
+}
+
+.btn {
+  background-color: #290F00;
+  color: #FFFFFF;
+  padding: 0 0.5rem;
 }
