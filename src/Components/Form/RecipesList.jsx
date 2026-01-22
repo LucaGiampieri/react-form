@@ -23,6 +23,18 @@ export function RecipesList() {
         setNewRecipes("");
     }
 
+    //creiamo una funzione per rimuovere una ricetta dall'array, indiceArray sarà l'indice del bottone in cui abbiamo fatto il click
+    const removeRecipes = indiceArray => {
+        //andiamo a scorrere tutto l'array comparando ogni volta l'indice dell'array con quello che abbiamo cliccato 
+        const updatedRecipes = recipes.filter((recipe, i) => {
+            //quando i due inidici corrispondono non lo salva nel nuovo array che filter sta generando
+            return i !== indiceArray
+        });
+        //tramite setRecipes andiamo a modificare Recipes nell'array appena generato
+        setRecipes(updatedRecipes);
+    }
+
+
     return (
         <div className="recipes-container">
             <h2 className="recipes-title" >Ricette:</h2>
@@ -30,6 +42,9 @@ export function RecipesList() {
                 {/* andiamo a ciclare la lista di ricette per stamparle tutte a schermo */}
                 {recipes.map((recipe, index) => (
                     <li key={index}>
+                        <button className="btn-remove" onClick={() => removeRecipes(index)}>
+                            X
+                        </button>
                         <a className="recipe" href="#"> {recipe} </a>
                     </li>
                 ))}
@@ -44,7 +59,7 @@ export function RecipesList() {
                         value={newRecipes}
                         onChange={e => { setNewRecipes(e.target.value) }}
                     />
-                    <button className="btn">Aggiungi</button>
+                    <button className="btn-add">Aggiungi</button>
                 </div>
             </form>
 
