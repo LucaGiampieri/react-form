@@ -6,11 +6,25 @@
 
 /* Header */
 
+header {
+  height: 100px;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+}
+
 .header-title {
   font-family: "Playwrite GB J Guides", cursive;
   font-size: 4rem;
-  background-color: aliceblue;
-  padding: 1rem 3rem;
+
 }
 
 /* Main */
+
+.main-container {
+  background-image: url(https://fpettinaroli.it/wp-content/uploads/2025/07/ricette.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 100px);
+}
