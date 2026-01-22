@@ -4,18 +4,29 @@
   box-sizing: border-box;
 }
 
+/* Generics */
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Header */
 
 header {
   height: 100px;
-  background-color: aliceblue;
+  background-color: #FFFFFF;
   display: flex;
-  align-items: center;
+  align-items: end;
 }
 
 .header-title {
   font-family: "Playwrite GB J Guides", cursive;
   font-size: 4rem;
+  color: #290F00;
 
 }
 
@@ -27,4 +38,30 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: calc(100vh - 100px);
+}
+
+.recipes-container {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  font-family: 'Story Script', cursive;
+}
+
+.recipes-title {
+  font-size: 5rem;
+  padding-top: 1rem;
+  color: #290F00;
+}
+
+.recipes-list {
+  padding-top: 0.5rem;
+}
+
+.recipes-list li {
+  padding-bottom: 0.1rem;
+}
+
+.recipe {
+  font-size: 1.5rem;
+  color: #290F00;
 }

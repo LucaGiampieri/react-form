@@ -1,11 +1,11 @@
-import { ArticleList } from "./Form/ArticleList"
+import { RecipesList } from "./Form/RecipesList"
 
 export function MainContent() {
 
     return (
 
         <div className="main-container">
-            <ArticleList />
+            <RecipesList />
         </div>
 
     )
