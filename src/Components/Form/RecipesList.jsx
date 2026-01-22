@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Recipes } from "./Recipes";
 
 export function RecipesList() {
 
@@ -47,12 +48,12 @@ export function RecipesList() {
             <ul className="recipes-list">
                 {/* andiamo a ciclare la lista di ricette per stamparle tutte a schermo */}
                 {recipes.map((recipe, index) => (
-                    <li key={index}>
-                        <button className="btn-remove" onClick={() => removeRecipes(index)}>
-                            X
-                        </button>
-                        <a className="recipe" href="#"> {recipe} </a>
-                    </li>
+                    <Recipes
+                        key={index}
+                        title={recipe}
+                        /* richiamno la funzione removeRecipes */
+                        removeRecipes={() => { removeRecipes(index) }}
+                    />
                 ))}
             </ul>
             {/* form per aggiungere nuova Recipes alla lista precedente */}
