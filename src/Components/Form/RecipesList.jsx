@@ -42,6 +42,9 @@ export function RecipesList() {
         setRecipes(updatedRecipes);
     }
 
+    //creiamo una funzione per salvare l'input
+    const saveInputOnChange = e => { setNewRecipes(e.target.value) }
+
     return (
         <div className="recipes-container">
             <h2 className="recipes-title" >Ricette:</h2>
@@ -64,7 +67,7 @@ export function RecipesList() {
                         className=""
                         placeholder="Aggiungi una ricetta"
                         value={newRecipes}
-                        onChange={e => { setNewRecipes(e.target.value) }}
+                        onChange={saveInputOnChange}
                     />
                     <button className="btn-add">Aggiungi</button>
                 </div>
